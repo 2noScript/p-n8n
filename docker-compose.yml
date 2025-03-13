@@ -11,5 +11,6 @@ services:
       - N8N_AUTH_EXCLUDE_ENDPOINTS=          
       - N8N_ADMIN_EMAIL=thangmk7@gmail.com  
       - N8N_ADMIN_PASSWORD=t22022000
+      - N8N_SECURE_COOKIE=false
     volumes:
       - ./n8n_data:/home/node/.n8n       
