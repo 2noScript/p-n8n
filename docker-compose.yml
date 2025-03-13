@@ -7,10 +7,13 @@ services:
     ports:
       - "5678:5678"
     environment:
-      - N8N_USER_MANAGEMENT_DISABLED=false   
-      - N8N_AUTH_EXCLUDE_ENDPOINTS=          
-      - N8N_ADMIN_EMAIL=thangmk7@gmail.com  
-      - N8N_ADMIN_PASSWORD=t22022000
       - N8N_SECURE_COOKIE=false
+      - DB_TYPE=mysqldb
+      - DB_MYSQLDB_HOST=localhost  # Không có http://
+      - DB_MYSQLDB_PORT=3306
+      - DB_MYSQLDB_DATABASE=n8n
+      - DB_MYSQLDB_USER=root
+      - DB_MYSQLDB_PASSWORD=22022000
+
     volumes:
       - ./n8n_data:/home/node/.n8n       
